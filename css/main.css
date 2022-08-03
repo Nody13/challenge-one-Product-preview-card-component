@@ -1,0 +1,130 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+/* start elmt3'yrat */
+:root {
+    --p-font-size: 14px;
+    --border-radius: 10px
+}
+/* end elmt3'yrat */
+
+/* mobile screen */
+@media (max-width:390) {
+    article {
+    width: 375px
+    }
+}
+/* desktop screen  */
+@media (min-width: 391px) {
+    article {
+        width: 1440px;
+    }
+}
+/* start container */
+ article {
+    background-color: hsl(30, 38%, 92%);
+    margin: 50px auto;
+    padding: 160px;
+    box-shadow: 20px 20px 24px #ccc;
+    border-radius: 5px;
+}
+
+
+article .container  {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    border-radius: var(--border-radius)
+}
+
+article .container img {
+    width: 50%;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+article .container .content {
+    padding: 25px;
+}
+
+article .container .content p:first-child {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: var(--p-font-size);
+    color: hsl(228, 12%, 48%);
+}
+
+article .container .content h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+article .container .content p:nth-of-type(2){
+    color: hsl(228, 12%, 48%);
+    font-size: var(--p-font-size);
+    line-height: 1.4;
+}
+
+article .container .content p:nth-of-type(2) span.uppercase {
+    text-transform: uppercase;
+}
+
+article .container .content p span {
+    text-transform: capitalize;
+}
+
+article .container .content .price {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 25px;
+}
+
+article .container .content .price span {
+    text-decoration-line: line-through;
+    font-size: var(--p-font-size);
+    color: hsl(228, 12%, 48%);
+}
+
+article .container .content input {
+    width: 100%;
+    background-color: #3e8167;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    padding: var(--p-font-size);
+    border: none;
+}
+
+@media (max-width: 390px) {
+    article {
+        padding: 5px;
+    }
+    article .container {
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+    }
+    article .container img {
+        width: 100%;
+    }
+    
+article .container .content p:nth-of-type(2) {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+article .container .content input {
+        width: 100%;
+    }
+}
